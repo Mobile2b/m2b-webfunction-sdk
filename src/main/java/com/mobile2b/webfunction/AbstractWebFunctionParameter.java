@@ -8,8 +8,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
-import java.util.Map;
-
 @Getter
 @Setter
 @SuperBuilder
@@ -20,7 +18,7 @@ public abstract class AbstractWebFunctionParameter {
     private String id;
 
     @NotEmpty
-    private Map<String, String> label;
+    private I18nString label;
 
     @NotNull
     private WebFunctionParameterType type;
