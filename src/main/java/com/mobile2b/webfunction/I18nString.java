@@ -1,9 +1,11 @@
 package com.mobile2b.webfunction;
 
+import lombok.NoArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.LinkedHashMap;
 
+@NoArgsConstructor
 public class I18nString extends LinkedHashMap<String, String> {
 
     private static final String FALLBACK_LANGUAGE = "en";
