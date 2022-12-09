@@ -1,6 +1,6 @@
 package com.mobile2b.webfunction;
 
-public enum WebFunctionParameterType {
+public enum Type {
     STRING,
     NUMBER,
     BOOLEAN,

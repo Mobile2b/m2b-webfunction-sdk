@@ -58,11 +58,11 @@ public abstract class AbstractWebFunctionController {
     }
 
     private void validateVarType(AbstractWebFunctionParameter variable, Object value) {
-        if (variable.getType() == WebFunctionParameterType.STRING && !(value instanceof String)) {
+        if (variable.getType() == Type.STRING && !(value instanceof String)) {
             throwTypeException(variable, value);
-        } else if (variable.getType() == WebFunctionParameterType.NUMBER && !(value instanceof Number)) {
+        } else if (variable.getType() == Type.NUMBER && !(value instanceof Number)) {
             throwTypeException(variable, value);
-        } else if (variable.getType() == WebFunctionParameterType.BOOLEAN && !(value instanceof Boolean)) {
+        } else if (variable.getType() == Type.BOOLEAN && !(value instanceof Boolean)) {
             throwTypeException(variable, value);
         }
     }

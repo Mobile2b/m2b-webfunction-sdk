@@ -21,6 +21,6 @@ public abstract class AbstractWebFunctionParameter {
     private I18nString label;
 
     @NotNull
-    private WebFunctionParameterType type;
+    private Type type;
 
 }
