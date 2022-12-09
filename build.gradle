@@ -28,15 +28,10 @@ test {
 
 publishing {
     publications {
-    }
-    repositories {
-        maven {
-            name = "Mobile2bWebFunctionSDK" //  optional target repository name
-            url = "https://github.com/Mobile2b/m2b-webfunction-sdk"
-            credentials {
-                username = ""
-                password = ""
-            }
+        mavenJava(MavenPublication) {
+            groupId = 'com.mobile2b'
+            artifactId = '1.0-SNAPSHOT'
+            from components.java
         }
     }
 }
