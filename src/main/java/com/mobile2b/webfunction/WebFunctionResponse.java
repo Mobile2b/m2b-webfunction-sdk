@@ -14,7 +14,7 @@ public class WebFunctionResponse {
 
     @NotBlank
     private String requestId;
-    
+
     private Map<String, Object> data;
 
 }

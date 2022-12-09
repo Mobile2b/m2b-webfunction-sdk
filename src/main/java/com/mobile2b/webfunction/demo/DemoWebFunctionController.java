@@ -1,9 +1,9 @@
 package com.mobile2b.webfunction.demo;
 
-import com.mobile2b.webfunction.*;
-import org.apache.commons.lang3.StringUtils;
-
-import java.util.Map;
+import com.mobile2b.webfunction.AbstractWebFunctionController;
+import com.mobile2b.webfunction.DocumentationResponse;
+import com.mobile2b.webfunction.WebFunctionRequest;
+import com.mobile2b.webfunction.WebFunctionResponse;
 
 public class DemoWebFunctionController extends AbstractWebFunctionController {
 
