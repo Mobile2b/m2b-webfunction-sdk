@@ -17,4 +17,41 @@ public class WebFunctionInputParameter extends AbstractWebFunctionParameter {
         this.required = required;
     }
 
+    public static WebFunctionInputParameterBuilder builder() {
+        return new WebFunctionInputParameterBuilder();
+    }
+
+    public static class WebFunctionInputParameterBuilder {
+
+        private String id;
+        private I18nString label;
+        private Type type;
+        private boolean required;
+
+        public WebFunctionInputParameterBuilder id(String id) {
+            this.id = id;
+            return this;
+        }
+
+        public WebFunctionInputParameterBuilder label(I18nString label) {
+            this.label = label;
+            return this;
+        }
+
+        public WebFunctionInputParameterBuilder type(Type type) {
+            this.type = type;
+            return this;
+        }
+
+        public WebFunctionInputParameterBuilder required(boolean required) {
+            this.required = required;
+            return this;
+        }
+
+        public WebFunctionInputParameter build() {
+            return new WebFunctionInputParameter(id, label, type, required);
+        }
+
+    }
+
 }
