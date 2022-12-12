@@ -1,20 +1,27 @@
 package com.mobile2b.webfunction;
 
-import jakarta.validation.constraints.NotBlank;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-
 import java.util.Map;
 
-@Getter
-@Setter
-@ToString
 public class WebFunctionResponse {
 
-    @NotBlank
     private String requestId;
 
     private Map<String, Object> data;
+
+    public String getRequestId() {
+        return requestId;
+    }
+
+    public void setRequestId(String requestId) {
+        this.requestId = requestId;
+    }
+
+    public Map<String, Object> getData() {
+        return data;
+    }
+
+    public void setData(Map<String, Object> data) {
+        this.data = data;
+    }
 
 }

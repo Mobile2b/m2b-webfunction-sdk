@@ -1,26 +1,41 @@
 package com.mobile2b.webfunction;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.NotNull;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.experimental.SuperBuilder;
-
-@Getter
-@Setter
-@SuperBuilder
-@NoArgsConstructor
 public abstract class AbstractWebFunctionParameter {
 
-    @NotBlank
     private String id;
 
-    @NotEmpty
     private I18nString label;
 
-    @NotNull
     private Type type;
+
+    public AbstractWebFunctionParameter(String id, I18nString label, Type type) {
+        this.id = id;
+        this.label = label;
+        this.type = type;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public I18nString getLabel() {
+        return label;
+    }
+
+    public void setLabel(I18nString label) {
+        this.label = label;
+    }
+
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
+    }
 
 }

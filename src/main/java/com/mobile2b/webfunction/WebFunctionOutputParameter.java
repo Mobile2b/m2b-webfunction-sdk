@@ -1,13 +1,9 @@
 package com.mobile2b.webfunction;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.experimental.SuperBuilder;
-
-@Getter
-@Setter
-@SuperBuilder
-@NoArgsConstructor
 public class WebFunctionOutputParameter extends AbstractWebFunctionParameter {
+
+    public WebFunctionOutputParameter(String id, I18nString label, Type type) {
+        super(id, label, type);
+    }
+    
 }

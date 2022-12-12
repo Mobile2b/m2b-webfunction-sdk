@@ -1,14 +1,13 @@
 package com.mobile2b.webfunction;
 
-import lombok.NoArgsConstructor;
-import org.apache.commons.lang3.StringUtils;
-
 import java.util.LinkedHashMap;
 
-@NoArgsConstructor
 public class I18nString extends LinkedHashMap<String, String> {
 
     private static final String FALLBACK_LANGUAGE = "en";
+
+    public I18nString() {
+    }
 
     public I18nString(String lang, String string) {
         put(lang, string);
@@ -21,16 +20,16 @@ public class I18nString extends LinkedHashMap<String, String> {
     public String getLocalizedString(String lang) {
         try {
             // Try to get string in requested language
-            if (StringUtils.isNotEmpty(get(lang))) {
+            if (Utils.isNotEmpty(get(lang))) {
                 return get(lang);
             }
             // If not available, try to use fallback language (English)
-            if (StringUtils.isNotEmpty(get(FALLBACK_LANGUAGE))) {
+            if (Utils.isNotEmpty(get(FALLBACK_LANGUAGE))) {
                 return get(FALLBACK_LANGUAGE);
             }
             // If also not available, use first available string
             for (String key : keySet()) {
-                if (StringUtils.isNotEmpty(get(key))) {
+                if (Utils.isNotEmpty(get(key))) {
                     return get(key);
                 }
             }

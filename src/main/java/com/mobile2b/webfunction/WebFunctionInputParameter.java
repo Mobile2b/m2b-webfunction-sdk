@@ -1,16 +1,20 @@
 package com.mobile2b.webfunction;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.experimental.SuperBuilder;
-
-@Getter
-@Setter
-@SuperBuilder
-@NoArgsConstructor
 public class WebFunctionInputParameter extends AbstractWebFunctionParameter {
 
     private boolean required;
+
+    public WebFunctionInputParameter(String id, I18nString label, Type type, boolean required) {
+        super(id, label, type);
+        this.required = required;
+    }
+
+    public boolean isRequired() {
+        return required;
+    }
+
+    public void setRequired(boolean required) {
+        this.required = required;
+    }
 
 }

@@ -1,7 +1,5 @@
 package com.mobile2b.webfunction;
 
-import org.apache.commons.lang3.StringUtils;
-
 import java.util.Map;
 
 public abstract class AbstractWebFunctionController {
@@ -27,7 +25,7 @@ public abstract class AbstractWebFunctionController {
             for (WebFunctionInputParameter variable : function.getInput()) {
                 if (variable.isRequired()) {
                     if (request.getData() == null || !request.getData().containsKey(variable.getId()) || request.getData().get(variable.getId()) == null) {
-                        throw new IllegalArgumentException("Variable \"" + variable.getId() + "\" (" + StringUtils.capitalize(variable.getType().toString().toLowerCase()) + ") is required but missing in request.");
+                        throw new IllegalArgumentException("Variable \"" + variable.getId() + "\" (" + variable.getType().toString() + ") is required but missing in request.");
                     }
                 }
             }
@@ -68,7 +66,7 @@ public abstract class AbstractWebFunctionController {
     }
 
     private void throwTypeException(AbstractWebFunctionParameter variable, Object value) {
-        throw new IllegalArgumentException("Value of \"" + variable.getId() + "\" is of type " + value.getClass().getSimpleName() + " but is expected to be of type " + StringUtils.capitalize(variable.getType().toString().toLowerCase()));
+        throw new IllegalArgumentException("Value of \"" + variable.getId() + "\" is of type " + value.getClass().getSimpleName() + " but is expected to be of type " + variable.getType().toString());
     }
 
     private WebFunctionInputParameter findInputVariable(String id) {
