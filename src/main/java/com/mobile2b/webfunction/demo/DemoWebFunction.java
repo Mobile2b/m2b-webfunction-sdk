@@ -21,15 +21,15 @@ public class DemoWebFunction implements WebFunction {
     @Override
     public List<WebFunctionInputParameter> getInput() {
         return Arrays.asList(
-                new WebFunctionInputParameter(VAR_ID_NUM1, I18nString.en("First number"), Type.NUMBER, true),
-                new WebFunctionInputParameter(VAR_ID_NUM2, I18nString.en("Second number"), Type.NUMBER, true)
+                WebFunctionInputParameter.builder().id(VAR_ID_NUM1).label(I18nString.en("First number")).type(Type.NUMBER).required(true).build(),
+                WebFunctionInputParameter.builder().id(VAR_ID_NUM2).label(I18nString.en("Second number")).type(Type.NUMBER).required(true).build()
         );
     }
 
     @Override
     public List<WebFunctionOutputParameter> getOutput() {
         return Arrays.asList(
-                new WebFunctionOutputParameter(VAR_ID_SUM, I18nString.en("Sum"), Type.NUMBER)
+                WebFunctionOutputParameter.builder().id(VAR_ID_SUM).label(I18nString.en("Sum")).type(Type.NUMBER).build()
         );
     }
 
