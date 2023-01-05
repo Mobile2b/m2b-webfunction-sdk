@@ -3,6 +3,10 @@ package com.mobile2b.webfunction;
 public class WebFunctionInputParameter extends AbstractWebFunctionParameter {
 
     private boolean required;
+    
+    public WebFunctionInputParameter() {
+        super();
+    }
 
     public WebFunctionInputParameter(String id, I18nString label, Type type, boolean required) {
         super(id, label, type);
