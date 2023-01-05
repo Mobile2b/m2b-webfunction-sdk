@@ -8,6 +8,9 @@ public abstract class AbstractWebFunctionParameter {
 
     private Type type;
 
+    public AbstractWebFunctionParameter() {
+    }
+
     public AbstractWebFunctionParameter(String id, I18nString label, Type type) {
         this.id = id;
         this.label = label;
