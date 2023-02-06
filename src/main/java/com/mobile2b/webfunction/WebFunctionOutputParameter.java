@@ -39,6 +39,11 @@ public class WebFunctionOutputParameter extends AbstractWebFunctionParameter {
             return new WebFunctionOutputParameter(id, label, type);
         }
 
+        @Override
+        public String toString() {
+            return id + " " + type + " " + label;
+        }
+
     }
 
 }
