@@ -13,5 +13,6 @@ public enum Type {
     DOCUMENT,
     FILE,
     TABLE,
-    LOCATION
+    LOCATION,
+    DICTIONARY
 }
