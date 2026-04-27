@@ -14,5 +14,7 @@ public enum Type {
     FILE,
     TABLE,
     LOCATION,
-    DICTIONARY
+    DICTIONARY,
+    /** A fixed set of selectable values. Use together with {@link WebFunctionInputParameter#getOptions()}. */
+    SELECT
 }

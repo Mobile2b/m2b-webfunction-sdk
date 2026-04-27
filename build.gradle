@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'com.mobile2b'
-version '1.0-SNAPSHOT'
+version '0.1.11-SNAPSHOT'
 
 repositories {
     mavenCentral()
@@ -21,7 +21,7 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
             groupId = 'com.mobile2b'
-            artifactId = '1.0-SNAPSHOT'
+            artifactId = 'm2b-webfunction-sdk'
             from components.java
         }
     }
